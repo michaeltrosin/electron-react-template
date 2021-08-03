@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
-import App from '@/app';
 import report_web_vitals from './report_web_vitals';
 
 ReactDOM.render(
-    <App/>,
+    (<div>Hello World</div>),
     document.getElementById('root')
 );
 
