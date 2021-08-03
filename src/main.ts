@@ -1,4 +1,4 @@
-import {app, BrowserWindow, MessageBoxOptions} from 'electron';
+import {app, BrowserWindow} from 'electron';
 import isDev from 'electron-is-dev'; // New Import
 
 const createWindow = (): void => {
