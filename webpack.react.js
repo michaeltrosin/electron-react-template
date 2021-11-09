@@ -1,6 +1,7 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
-const rules = require('./img_rules');
+const rules = require('./pack_rules');
 
 module.exports = {
   mode: 'development',
@@ -8,8 +9,9 @@ module.exports = {
   target: 'electron-renderer',
   devtool: 'source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'dist/renderer.js'),
+    static: path.join(__dirname, 'bin'),// /renderer.js'),
     compress: true,
+    
     port: 9000,
   },
   resolve: {
@@ -36,13 +38,19 @@ module.exports = {
       },
       rules.source,
       rules.inline,
-      rules.resource
+      rules.resource,
+      rules.svg,
     ],
   },
   output: {
-    path: __dirname + '/dist',
+    path: __dirname + '/bin',
     filename: 'renderer.js',
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+  ],
   "externals": {
     "electron": "require('electron')",
     "child_process": "require('child_process')",
