@@ -44,7 +44,6 @@
         "arrow-body-style": "warn",
         "camelcase": "error",
         "curly": [
-            "all",
             "error"
         ],
         "default-param-last": "error",
