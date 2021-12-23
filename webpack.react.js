@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
-const rules = require('./pack_rules');
+const rules = require('./webpackRules');
 
 module.exports = {
   mode: 'development',
