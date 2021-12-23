@@ -22,17 +22,16 @@
     "paths": {
       "@/*": [
         "src/*"
+      ],
+      "@asset/*": [
+        "asset/*"
       ]
-    },
-    "typeRoots": [
-      "./types",
-      "./node_modules/@types"
-    ]
+    }
   },
   "exclude": [
     "node_modules",
     "dist",
-    "types"
+    "tests"
   ],
   "lib": [
     "esnext"
