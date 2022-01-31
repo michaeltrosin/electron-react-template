@@ -162,6 +162,7 @@
     "globals": {
         "React": true,
         "JSX": true,
-        "Electron": true
+        "Electron": true,
+        "NodeJS": true
     }
 }
